@@ -2,17 +2,6 @@ $(document).ready(function () {
   "use strict";
   try {
     /* ==========================================================================
-         #PieChart For Skills Page
-         ========================================================================== */
-
-    $(".chart").easyPieChart({
-      easing: "easeOutBounce",
-      onStep: function (from, to, percent) {
-        $(this.el).find(".percent").text(Math.round(percent));
-      },
-    });
-
-    /* ==========================================================================
          #Carousel Popup For Portfolio Page
          ========================================================================== */
     $(".owl-carousel").owlCarousel({
@@ -39,14 +28,6 @@ $(document).ready(function () {
     $(".content-scroller").fitVids();
   } catch (ex) {}
 });
-
-/* ==========================================================================
- #Progress Bar For Skills Page
- ========================================================================== */
-
-progressBar(100, $("#progressBar"));
-progressBar(100, $("#progressBar2"));
-progressBar(60, $("#progressBar3"));
 
 /* ==========================================================================
  #Mobile Menu
