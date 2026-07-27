@@ -468,7 +468,7 @@
     .email {
         margin-bottom: 0;
     }
-    .contact-form input[type="text"], textarea {
+    .contact-form input[type="text"], .contact-form input[type="email"], textarea {
         width: 92%
     }
     .m-margin-top30 {
@@ -522,7 +522,7 @@
     .owl-pagination {
         bottom: 0 !important;
     }
-    .contact-form input[type="text"], textarea {
+    .contact-form input[type="text"], .contact-form input[type="email"], textarea {
         width: 88%;
     }
     .introduction .owl-theme .owl-controls {

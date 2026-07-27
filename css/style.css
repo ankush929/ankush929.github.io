@@ -107,6 +107,7 @@ img {
   float: right;
 }
 input[type="text"],
+input[type="email"],
 textarea {
   padding: 15px;
   border: none;
@@ -136,6 +137,7 @@ input[type="submit"] {
   -o-transition-duration: 0.2s;
 }
 input[type="text"]:focus,
+input[type="email"]:focus,
 textarea:focus {
   outline: none;
   color: #545454;
@@ -474,15 +476,12 @@ h5 {
 .social a:hover {
   color: #fff;
 }
-.social .facebook {
-  color: #5a7eca;
+.social .linkedin {
+  color: #0a86c4;
 }
-.social .twitter {
-  color: #03acf1;
-  margin: 0 26px 0 30px;
-}
-.social .google-plus {
-  color: #df4a32;
+.social .github {
+  color: #f8f8f8;
+  margin-left: 30px;
 }
 .copyright {
   position: absolute;
@@ -649,7 +648,22 @@ a.totop-link {
   background-size: contain;
 }
 .about .inner {
-  width: 50%;
+  width: 100%;
+}
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px 70px;
+}
+.about-vitals {
+  flex: 1 1 280px;
+}
+.about-profile {
+  flex: 1.8 1 420px;
+}
+.about-profile h3 {
+  margin-top: 0;
 }
 .about img {
   position: absolute;
@@ -659,6 +673,9 @@ a.totop-link {
 }
 .about-con {
   width: 100%;
+}
+.about-resume {
+  overflow: hidden;
 }
 .about-con ul {
   margin: 0;
@@ -840,6 +857,26 @@ a.totop-link {
   -webkit-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
 }
+/* Desktop: vertically center the short label column against the taller
+   content column, and give the content more width, so entries don't leave
+   a big empty gap beside a short title block. */
+@media screen and (min-width: 676px) {
+  .experience-con .experience-details,
+  .education-con .education-details {
+    display: flex;
+    align-items: center;
+    float: none;
+    width: 100%;
+  }
+  .experience-con .experience-details > .col-6:first-child,
+  .education-con .education-details > .col-6:first-child {
+    width: 38%;
+  }
+  .experience-con .experience-details > .col-6:last-child,
+  .education-con .education-details > .col-6:last-child {
+    width: 62%;
+  }
+}
 /* ==========================================================================
    #Education Screen
    ========================================================================== */
@@ -981,6 +1018,7 @@ a.totop-link {
   font-weight: 300;
   color: #ffffff;
   font-size: 55px;
+  line-height: 1.1;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   padding: 25px 0;
